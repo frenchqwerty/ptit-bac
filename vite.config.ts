@@ -31,4 +31,13 @@ export default defineConfig({
             formVariants: true,
         }),
     ],
+    server: {
+        host: '0.0.0.0',
+        port: 5173,
+        // Tell Vite that the Laravel app is served from Docker on port 80
+        cors: { origin: /localhost/ },
+        hmr: {
+            host: 'localhost',
+        },
+    },
 });
